@@ -30,7 +30,16 @@ public class Confirmacion {
     @Column(name = "fecha_modificacion")
     private Date fechaActualizacion;
 
+    @PrePersist
+    private void prePersist() {
+        fechaCreacion = new Date();
+        fechaActualizacion = new Date();
+    }
 
+    @PreUpdate
+    private void preUpdate() {
+        fechaActualizacion = new Date();
+    }
 
 
 }

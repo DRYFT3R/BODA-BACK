@@ -13,12 +13,12 @@ public class ConfirmacionService {
 
     private final ConfirmacionFacade facade;
 
-    public void confirmarAsistencia(List<ConfirmacionModel> mode) {
-        mode.forEach(m -> {
-            var confirmacion = new com.boda.asmmlp.app.domain.entity.Confirmacion();
-            confirmacion.setNombre(m.getNombre());
-            confirmacion.setConfirmado(m.getConfirmacion());
-            facade.guardar(confirmacion);
-        });
+    public void confirmarAsistencia(ConfirmacionModel mode) {
+
+        var confirmacion = new com.boda.asmmlp.app.domain.entity.Confirmacion();
+        confirmacion.setNombre(mode.getNombre());
+        confirmacion.setConfirmado(mode.getConfirmacion());
+        facade.guardar(confirmacion);
+
     }
 }

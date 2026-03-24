@@ -20,7 +20,7 @@ public class ConfirmacionController {
     private final ConfirmacionService service;
 
     @PostMapping("confirmacion")
-    public ResponseEntity<?> post(@RequestBody List<ConfirmacionModel> model) {
+    public ResponseEntity<?> post(@RequestBody ConfirmacionModel model) {
         service.confirmarAsistencia(model);
         return ResponseEntity.ok().build();
     }
