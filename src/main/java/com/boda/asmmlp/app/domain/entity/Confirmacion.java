@@ -11,7 +11,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "confirmacion")
+@Table(name = "confirmaciones")
 public class Confirmacion {
 
     @Id
@@ -24,10 +24,10 @@ public class Confirmacion {
     @Column(name = "confirmado")
     private String confirmado;
 
-    @Column(name = "created_at")
+    @Column(name = "fecha")
     private Date fechaCreacion;
 
-    @Column(name = "updated_at")
+    @Column(name = "fecha_modificacion")
     private Date fechaActualizacion;
 
 
